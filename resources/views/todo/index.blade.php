@@ -3,7 +3,15 @@
 .container{
     font-family: 微軟正黑體,Arial, Helvetica, sans-serif
 }
-.col{
+.nav-first{
+    padding-right: 0em;
+}
+.nav-end{
+    padding-left: 0em;
+    padding-left: 0em;
+    
+}
+.nav{
     padding: 0em;
 }
 .news-title{
@@ -12,41 +20,12 @@
     color: #e73278;
     
 }
-.news-content{
-
-}
 </style>
 
 <div class="container">
-    <div style="padding: 0em">
-        <img src="{{ asset('images/top.gif') }}" alt="" width="100%" >
-    </div>
-    <div class="row">
-        <div class="col nav">
-            <img src="{{ asset('images/nav/m-1a.jpg') }}" alt="" width="100%">
-        </div>
-        <div class="col nav">
-            <img src="{{ asset('images/nav/m-2a.jpg') }}" alt="" width="100%">
-        </div>
-        <div class="col nav">
-            <img src="{{ asset('images/nav/m-3a.jpg') }}" alt="" width="100%">
-        </div>
-        <div class="col nav">
-            <img src="{{ asset('images/nav/m-4a.jpg') }}" alt="" width="100%">
-        </div>
-        <div class="col nav">
-            <img src="{{ asset('images/nav/m-5a.jpg') }}" alt="" width="100%">
-        </div>
-        <div class="col nav">
-            <img src="{{ asset('images/nav/m-6a.jpg') }}" alt="" width="100%">
-        </div>
-        <div class="col nav">
-            <img src="{{ asset('images/nav/m-7a.jpg') }}" alt="" width="100%">
-        </div>
-        <div class="col nav">
-            <img src="{{ asset('images/nav/m-8a.jpg') }}" alt="" width="100%">
-        </div>
-    </div>
+    <header class="row">
+        @include('todo.nav')
+    </header>
     <div class="row">
         <div class="col-3">
                 <div id="fb-root"></div>
@@ -64,7 +43,10 @@
             </div>
         </div>
     </div>
-
+    <footer class="row">
+        @include('todo.footer')
+    </footer>
+<!-- 
     @foreach ($todos as $todo)
         <p>{{ $todo->id. '.'. $todo->title }}
             <form action="{{ url("todo/$todo->id")}}" method="POST">
@@ -81,5 +63,7 @@
         <input type="text" placeholder="text" name="title">
         <input type="submit" >
     </form>
+     -->
+
 </div>
 <script async defer crossorigin="anonymous" src="https://connect.facebook.net/zh_TW/sdk.js#xfbml=1&version=v3.3&appId=436951796756423&autoLogAppEvents=1"></script>
