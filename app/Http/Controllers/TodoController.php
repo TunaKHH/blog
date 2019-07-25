@@ -11,8 +11,14 @@ class TodoController extends Controller
     function index(){
         $todos = Todo::all();
         
-        return view('todo.index',[
-            'todos' => $todos
+        return view('todo.parent',[
+            'body' => 'todo.index'
+        ]);
+    }
+
+    function object(){
+        return view('todo.parent',[
+            'body' => 'todo.object'
         ]);
     }
 

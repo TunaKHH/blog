@@ -17,6 +17,10 @@ Route::get('/', function () {
 
 Route::get('/todo', 'TodoController@index');
 
+Route::get('/todo/index', 'TodoController@index');
+
+Route::get('/todo/object', 'TodoController@object');
+
 Route::post('/todo', 'TodoController@update');
 
 Route::delete('/todo/{todo}', 'TodoController@destory');
