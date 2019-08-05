@@ -1,5 +1,8 @@
 <link href="{{ asset('css/app.css') }}" rel="stylesheet">
 <style>
+body{
+    background-color:#eeeeee;
+}
 header{
     padding-bottom: 1em;
 }
@@ -38,6 +41,10 @@ p{
     font-size: 16px;
     font-weight: bold;
     color: #e73278;
+}
+img > .subar{
+    height: 20px;
+    width: 28px;
 }
 </style>
 

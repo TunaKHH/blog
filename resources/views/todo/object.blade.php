@@ -6,7 +6,7 @@
     
     <div class="col-9" style="text-align:center">
         <div class="row">
-            <img src="{{ asset('images/subar.png') }}" alt="" width="28px" height="20px">
+            <img src="{{ asset('images/subar.png') }}" class="subar">
             <span class="sub-title"> 參賽宗旨</span>
         </div>
         <div class="row" style="text-align:left">
