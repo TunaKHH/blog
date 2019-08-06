@@ -13,6 +13,9 @@ p{
     line-height: 2em;
     font-size: 14px
 }
+.content-area{
+    padding-left: 3em;
+}
 .container{
     font-family: 微軟正黑體,Arial, Helvetica, sans-serif
 }
@@ -38,6 +41,7 @@ p{
     border-bottom-width: 1px; 
 }
 .sub-title{
+    line-height: 2em;
     font-size: 16px;
     font-weight: bold;
     color: #e73278;
@@ -45,6 +49,16 @@ p{
 img > .subar{
     height: 20px;
     width: 28px;
+}
+.body-title{
+    color: #e73278;
+    font-size: 14px;
+    font-weight: bold;
+}
+.body-copy{
+    color: #004672;
+    font-family: "微軟正黑體";
+    line-height: 1.5em;
 }
 </style>
 

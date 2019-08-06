@@ -9,7 +9,7 @@ class TodoController extends Controller
 {
     //
     function index(){
-        $todos = Todo::all();
+        // $todos = Todo::all();
         
         return view('todo.parent',[
             'body' => 'todo.index'
@@ -19,6 +19,12 @@ class TodoController extends Controller
     function object(){
         return view('todo.parent',[
             'body' => 'todo.object'
+        ]);
+    }
+
+    function rule(){
+        return view('todo.parent',[
+            'body' => 'todo.rule'
         ]);
     }
 
