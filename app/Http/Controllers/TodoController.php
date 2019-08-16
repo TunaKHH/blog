@@ -11,22 +11,21 @@ class TodoController extends Controller
     function index(){
         // $todos = Todo::all();
         
-        return view('todo.parent',[
-            'body' => 'todo.index'
-        ]);
+        return view('todo.index');
     }
 
     function object(){
-        return view('todo.parent',[
-            'body' => 'todo.object'
-        ]);
+        return view('todo.object');
     }
 
     function rule(){
-        return view('todo.parent',[
-            'body' => 'todo.rule'
-        ]);
+        return view('todo.rule');
     }
+
+    function regi(){
+        return view('todo.regi');
+    }
+    
 
     function update(Request $request){//存入資料庫
         // $todo = new Todo();

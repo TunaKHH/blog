@@ -15,17 +15,23 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-Route::get('/todo', 'TodoController@index');
+Route::group(['prefix' => 'todo'], function () {
+    Route::get('/', 'TodoController@index');
 
-Route::get('/todo/index', 'TodoController@index');
+    Route::get('/index', 'TodoController@index');
+    
+    Route::get('/object', 'TodoController@object');
+    
+    Route::get('/rule', 'TodoController@rule');
 
-Route::get('/todo/object', 'TodoController@object');
+    Route::get('/regi', 'TodoController@regi');
+    
+    Route::post('/', 'TodoController@update');    
+});
 
-Route::get('/todo/rule', 'TodoController@rule');
-
-Route::post('/todo', 'TodoController@update');
 
 Route::delete('/todo/{todo}', 'TodoController@destory');
+
 Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
